@@ -1,0 +1,155 @@
+<div style="background: #eee;position: absolute;
+    top: 0em;
+    left: 0em;
+    right: 0em;
+    bottom: 0em;
+    overflow: auto;">
+<div class="MyHeaderMain">
+   <!--  <div class="myHeader">
+        <h3 style="font-size:1em;">我 的</h3>
+    </div> -->
+    <div class="weather">
+        <dl>
+           <dd>
+                <img src="UserModule/module/my/style/images/weatherIcon01.png" width="15" class="fl m-l-20"/> <span id="cityname"></span>
+                <p class="m-l-20" id="today"></p>
+                <p class="m-l-20" id="today2"></p>
+                <!-- <p class="m-l-20">周五 06月03日</p>
+                <p class="m-l-20">农历四月二十八</p> -->
+            </dd>
+            <dt>
+                <span class="fr m-r-10" id="weather"></span><img id="weatherImg" width="32" class="fr"/>
+            <div class="clear"></div>
+            <p id="weather_tmp"></p>
+            </dt>
+        </dl>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="member">
+    <ul>
+        <li style="position:relative;">
+        	<a style="
+			    position: absolute;
+			    padding: 5px 10px;
+			    right: 20px;
+			    top: 11px;
+			    font-size: 15px;
+			    display: none;
+			    background: #639f91;
+			    border-radius: 5px;
+			    -webkit-border-radius: 5px;
+			    -moz-border-radius: 5px;
+			    color: #fff;" id="J_real_buton" onclick="aigovApp.openAppWindow('kAuthentification')">去认证</a>
+            <a onclick="aigovApp.openAppWindow('myDetailInfo')">
+                <div class="fl photo"><img src="UserModule/module/my/style/images/inner_icon26.png" width="50" height="50" /> </div>
+                <div class="fl a-title">
+                    <span id="userName"></span>
+                    <span id="userName_st"></span>
+                    <p id="phone"></p>
+                </div>
+                <div class="fr a-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                <div class="clear"></div>
+            </a>
+        </li>
+    </ul>
+    <ol>
+        <li class="m-t-15">
+            <a onclick="aigovApp.openAppWindow('myHealthy')">
+                <div class="fl a-icon"><img src="UserModule/module/my/style/images/my-icon1.png"/> </div>
+                <div class="fl title ">
+                    <span class="fl">我的健康</span>
+                    <style>
+                    .health-cricle {
+					    color: #fff;
+					    margin-right: 10px;
+					    width: 30px;
+					    height: 30px;
+					    text-align: center;
+					    font-size: 14px;
+					    border-radius: 50%;
+					}
+					.health-cricle1 {
+						background: #f60;
+					}
+					</style>
+                    <div class="fr a-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    <div class="fr health-cricle"></div>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <li class="hidden">
+            <a >
+                <div class="fl a-icon"><img src="UserModule/module/my/style/images/my-icon2.png" /> </div>
+                <div class="fl title ">
+                    <span class="fl">我的小区</span>
+                    <div class="fr a-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <li>
+            <a  onclick="aigovApp.openAppWindow('myWork')">
+                <div class="fl a-icon"><img src="UserModule/module/my/style/images/my-icon3.png" /> </div>
+                <div class="fl title ">
+                    <span class="fl">我的办事</span>
+                    <div class="fr a-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <li>
+            <a  onclick="aigovApp.openAppWindow('myAccount')">
+                <div class="fl a-icon"><img src="UserModule/module/my/style/images/my-icon4.png" /> </div>
+                <div class="fl title ">
+                    <span class="fl">我的账户</span>
+                    <div class="fr a-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+        <li>
+            <a  onclick="aigovApp.openAppWindow('myRelate')">
+                <div class="fl a-icon"><img src="UserModule/module/my/style/images/my-icon5.png" /> </div>
+                <div class="fl title ">
+                    <span class="fl">我的沟通</span>
+                    <style>
+                    .my-cricle {
+					    color: #fff;
+					    margin-right: 10px;
+					    width: 30px;
+					    height: 30px;
+					    text-align: center;
+					    font-size: 14px;
+					    border-radius: 50%;
+					}
+					.my-cricle1 {
+						background: #f60;
+					}
+					</style>
+                    <div class="fr a-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+                    <div class="fr my-cricle"></div>
+                </div>
+                <div class="clear"></div>
+            </a>
+        </li>
+    </ol>
+    <button class="m-t-15" id="outBtn">退出登录</button>
+</div>
+</div>
+
+<div class="weui_dialog_confirm hidden" id="ifOut">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd">
+          <strong class="weui_dialog_title"></strong>
+        </div>
+        <div class="weui_dialog_bd">确定退出登录?</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" id="cancelBtn" class="weui_btn_dialog default">取消</a>
+            <a href="javascript:;" id="sureBtn" class="weui_btn_dialog primary">确定</a>
+        </div>
+    </div>
+</div>
